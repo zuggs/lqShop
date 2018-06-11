@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../css/iconfont.css" />
+<link rel="stylesheet" href="../css/common.css" />
+<link rel="stylesheet" href="../css/common2.css" />
+<link rel="stylesheet" href="../css/detail.css" />
+<script src="../js/jquery-1.11.3.js"></script>
+<script src="../js/cookie.js"></script>
+<script src="../js/data.js"></script>
+<title>利群商城商品详情</title>
+</head>
+<body>
+<!--top-->
+<div id="top">
+	<div id="login" class="clearfix">
+		<div id="message" class="clearfix">
+			<h2>Hi, <span id="insert"></span> 欢迎来到利群商城！</h2>
+			<h3>请登录</h3>
+			<h4>免费注册</h4>
+		</div>
+		<ul>
+			<li>我的订单</li>
+			<div></div>
+			<li><i class="iconfont icon-wo"></i>会员中心</li>
+			<div></div>
+			<li>客户服务<i class="iconfont icon-zelvxuanzefeiyongdaosanjiaoxingfandui"></i></li>
+			<div></div>
+			<li><i class="iconfont icon-shouji"></i>手机利群</li>
+			<div></div>
+			<li id="inde">利群官网</li>
+			<div></div>
+			<li>关注利群:</li>
+			<img src="../images/a_06.png" alt="" />
+			<img src="../images/a_08.png" alt="" />
+			<img src="../images/a_10.png" alt="" />
+		</ul>
+	</div>
+	<div id="search">
+		<h2>
+			<img src="../images/a_16.jpg" alt="" />
+		</h2>
+		<h3>
+			<img src="../images/b_03.jpg" alt="" />
+		</h3>
+		<div id="form">
+			<form onsubmit="return false;">
+				<i class="iconfont icon-fangdajing"></i>
+				<input type="text" placeholder="美赞臣"/>
+				<input type="button" value=" 搜  索"/>			
+			</form>
+			<ul>
+				<li>热门搜索:</li>
+				<li>丹姿大促</li>
+				<li>纸品联合</li>
+				<li>中秋月饼</li>
+				<li>亨氏专场</li>
+				<li>手机大促</li>
+				<li>家电阅兵</li>
+			</ul>
+		</div>
+		<div id="shopCart" onclick="location.href='cart.html';">
+			<div>0</div>
+			<i class="iconfont icon-gouwuche"></i> 去购物车结算
+		</div>
+		<div id="tel">
+			<h4>客服热线</h4>
+			<h5>4006-888-688</h5>
+		</div>
+	</div>
+</div>
+<!--detail-->
+<div id="detail" class="clearfix">
+	<div id="detailL">
+		<div>
+			<h2>相关分类</h2>
+			<ul class="dt clearfix">
+				<li>数码</li>
+				<li id="sj">手机</li>
+				<li>相机</li>
+				<li>手机备件</li>
+				<li>笔记本</li>
+				<li>充电宝</li>
+			</ul>
+		</div>
+		<div>
+			<h2>同类其他品牌</h2>
+			<ul class="dt clearfix" id="sj2">
+				<li>iPhone</li>
+				<li>小米</li>
+				<li>魅族</li>
+				<li>华为</li>
+				<li>三星</li>
+				<li>1+</li>
+			</ul>
+		</div>
+		<div id="rank">
+			<h2>热销排行榜TOP5</h2>
+			<li>
+				<img src="../images/ax_06.gif" alt="" />
+				<h3>iPhone5s</h3>
+			</li>
+			<li>
+				<img src="../images/l11.jpg" alt="" />
+				<h3>三星手机G9280(64G)金</h3>
+			</li>
+			<li>
+				<img src="../images/l20.jpg" alt="" />
+				<h3>华为P7</h3>
+			</li>
+			<li>
+				<img src="../images/l8.jpg" alt="" />
+				<h3>三星P7</h3>
+			</li>
+			<li>
+				<img src="../images/l10.jpg" alt="" />
+				<h3>三星手机G9280(64G)金</h3>
+			</li>
+		</div>
+	</div>
+	<div id="detailR">
+		<h2><span>手机数码</span> &gt;手机 &gt;<i></i><i></i></h2>
+		<div id="pri" class="clearfix">
+			<div id="ima">
+				<div id="mask"></div>
+			</div>
+			<div id="magnifying"></div>
+			<div id="intro">
+				<ul id="shop">
+					<li></li>
+					<li>支持7天无理由退货， 定制商品除外，鲜活易腐、酒水等商品仅支持当面退货</li>
+					<li id="li3">商 &nbsp;城 &nbsp;价：<i></i></li>
+					<li>毛 &nbsp; &nbsp; &nbsp; 重：<span class="cl"></span></li>
+					<li>送 &nbsp;积 &nbsp;分：单件送 <span class="cl"></span> 积分</li>
+					<li>支 &nbsp; &nbsp; &nbsp; 持：山东省满<span class="cl">68</span>元<span class="cl">5</span>公斤以下满运费<span class="cl1"> 查看详细 </span></li>
+					<li>服 &nbsp; &nbsp; &nbsp; 务：由<span class="cl2" onclick="location.href='index.html';"> 利群商城 </span>发货并提供售后服务。</li>
+				</ul>
+				<div>购买数量：
+					<input type="button" value="-"/>
+					<input type="text" value="0" class="cl"/>
+					<input type="button" value="+"/>
+				</div>
+				<h4>
+					<img src="../images/0_03.jpg" alt="" />
+					<img src="../images/0_05.jpg" alt="" />
+				</h4>
+				<h5>
+					更多选择:
+					<i>苹果手机</i>
+					<i>小米手机</i>
+					<i>MEIZU魅族手机</i>
+					<i>1+手机</i>
+					<i>OPPO手机</i>
+					<i>ZTE中兴手机</i>
+				</h5>
+			</div>
+		</div>
+		<div id="comb">
+			<h3>精选组合</h3>
+			<h2></h2>
+			<div class="clearfix">
+				<ul>
+					<li>
+						<img/>
+						<h2></h2>
+						<h3></h3>
+					</li>
+					<span><img src="../images/zc_03.jpg" alt="" /></span>
+					<li>
+						<img src="../images/zz_04.jpg"/>
+						<h2>YOMO钢化膜</h2>
+						<h3><label><input type="checkbox" />￥<span>9.80</span></label></h3>
+						<h4 id="acart">加入购物车</h4>
+					</li>
+					<span><img src="../images/zc_03.jpg" alt="" /></span>
+					<li>
+						<img src="../images/zz_05.jpg"/>
+						<h2>KOOLIFE 手机壳</h2>
+						<h3><label><input type="checkbox" />￥<span>19.00</span></label></h3>
+						<h4>加入购物车</h4>
+					</li>
+					<span><img src="../images/zc_03.jpg" alt="" /></span>
+					<li>
+						<img src="../images/zz_06.jpg"/>
+						<h2>华为充电宝</h2>
+						<h3><label><input type="checkbox" />￥<span>229.00</span></label></h3>
+						<h4>加入购物车</h4>
+					</li>
+					<span><img src="../images/zc_03.jpg" alt="" /></span>
+					<li>
+						<img src="../images/zz_07.jpg"/>
+						<h2>倍思三合一快充</h2>
+						<h3><label><input type="checkbox" />￥<span>29.90</span></label></h3>
+						<h4>加入购物车</h4>
+					</li>
+					<span><img src="../images/zc_03.jpg" alt="" /></span>
+					<li>
+						<img src="../images/zz_08.jpg"/>
+						<h2>公牛usb充电器</h2>
+						<h3><label><input type="checkbox" /><span>59.00</span></label></h3>
+						<h4>加入购物车</h4>
+					</li>
+				</ul>
+				<div id="pcomb" class="clearfix">
+					<img src="../images/zv_03.jpg" alt="" />
+					<ul>
+						<li>搭配价：<span></span></li>
+						<li>获得优惠： ￥<i>11.20</i></li>
+						<h2>购买组合</h2>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="gdImg">
+			<h2 class="menu menu1">
+				<li class="select">商品介绍</li>
+				<li>商品评价</li>
+			</h2>
+			<div class="show clearfix">
+				<h2>产品介绍</h2>
+				<h3>Products Presentation</h3>
+				<h4>www.liqunshop.com</h4>
+				<li>网购利群商城就在您身边</li>
+			</div>
+			<div id="pp" class="clearfix">
+				<img/>
+				<div>
+					<h2></h2>
+					<h3>价格：<span></span></h3>
+					<h4>保修期：12个月</h4>
+					<p>保证：本产品全国联保，享受三包服务，质保期为：全国联保一年，享受7日内退货，15日内换货。</p>
+				</div>
+			</div>
+			<div class="show clearfix show1">
+				<h2>产品展示</h2>
+				<h3>Products Display</h3>
+				<h4>www.liqunshop.com</h4>
+				<li>网购利群商城就在您身边</li>
+			</div>
+			<div id="imag">
+				<img>
+				<img>
+				<img>
+				<img>
+			</div>
+			<h3>注意：图片及信息仅供参照，商品以实物为准。因包装更换、拍摄及显示器色差等问题，可能造成商品图片与实物有一定的差异</h3>
+			<div id="evaluate">
+				<div id="evaTop">
+					<h2>商品评价</h2>
+					<ul class="clearfix">
+						<li>
+							<h2>100<span>%</span></h2>
+							<h3>好评度</h3>
+						</li>
+						<li class="evad">
+							<h2>好评<span>(100%)</span><i></i></h2>
+							<h2>中评 <span>(0.0%)</span><i></i></h2>
+							<h2>差评 <span>(0.0%)</span><i></i></h2>
+						</li>
+					</ul>
+				</div>
+				<h2 class="menu menu2">
+					<li class="select">全部评价（357）</li>
+					<li>好评（356）</li>
+					<li>中评（1）</li>
+					<li>差评（0）</li>
+				</h2>
+				<ul class="evList clearfix">
+					<li>
+						<h3 class="clearfix"><img src="../images/zb_03.jpg"/><span>〈</span></h3>
+						<h2>p*****0</h2>
+					</li>
+					<li>
+						<h2><img src="../images/zb_05.jpg" alt="" /></h2>
+						<h3>评价： <span>好评</span></h3>
+					</li>
+				</ul>
+				<ul class="evList clearfix">
+					<li>
+						<h3 class="clearfix"><img src="../images/zb_03.jpg"/><span>〈</span></h3>
+						<h2>p*****7</h2>
+					</li>
+					<li>
+						<h2><img src="../images/zb_05.jpg" alt="" /></h2>
+						<h3>评价： <span>好评</span></h3>
+					</li>
+				</ul>
+				<ul class="evList clearfix">
+					<li>
+						<h3 class="clearfix"><img src="../images/zb_03.jpg"/><span>〈</span></h3>
+						<h2>D*****0</h2>
+					</li>
+					<li>
+						<h2><img src="../images/zb_05.jpg" alt="" /></h2>
+						<h3>评价： <span>好评</span></h3>
+					</li>
+				</ul>
+				<ul class="evList clearfix">
+					<li>
+						<h3 class="clearfix"><img src="../images/zb_03.jpg"/><span>〈</span></h3>
+						<h2>0*****7</h2>
+					</li>
+					<li>
+						<h2><img src="../images/zb_05.jpg" alt="" /></h2>
+						<h3>评价： <span>好评</span></h3>
+					</li>
+				</ul>
+				<ul class="evList clearfix">
+					<li>
+						<h3 class="clearfix"><img src="../images/zb_03.jpg"/><span>〈</span></h3>
+						<h2>0*****4</h2>
+					</li>
+					<li>
+						<h2><img src="../images/zb_05.jpg" alt="" /></h2>
+						<h3>评价： <span>好评</span></h3>
+					</li>
+				</ul>
+				<ul class="evList clearfix">
+					<li>
+						<h3 class="clearfix"><img src="../images/zb_03.jpg"/><span>〈</span></h3>
+						<h2>0*****5</h2>
+					</li>
+					<li>
+						<h2><img src="../images/zb_05.jpg" alt="" /></h2>
+						<h3>评价： <span>好评</span></h3>
+					</li>
+				</ul>
+				<ul class="evList clearfix">
+					<li>
+						<h3 class="clearfix"><img src="../images/zb_03.jpg"/><span>〈</span></h3>
+						<h2>0*****3</h2>
+					</li>
+					<li>
+						<h2><img src="../images/zb_05.jpg" alt="" /></h2>
+						<h3>评价： <span>好评</span></h3>
+					</li>
+				</ul>
+				<ul class="evList clearfix">
+					<li>
+						<h3 class="clearfix"><img src="../images/zb_03.jpg"/><span>〈</span></h3>
+						<h2>0*****5</h2>
+					</li>
+					<li>
+						<h2><img src="../images/zb_05.jpg" alt="" /></h2>
+						<h3>评价： <span>好评</span></h3>
+					</li>
+				</ul>
+				<ul class="evList clearfix">
+					<li>
+						<h3 class="clearfix"><img src="../images/zb_03.jpg"/><span>〈</span></h3>
+						<h2>0*****7</h2>
+					</li>
+					<li>
+						<h2><img src="../images/zb_05.jpg" alt="" /></h2>
+						<h3>评价： <span>好评</span></h3>
+					</li>
+				</ul>
+				<ul class="evList clearfix">
+					<li>
+						<h3 class="clearfix"><img src="../images/zb_03.jpg"/><span>〈</span></h3>
+						<h2>1*****a</h2>
+					</li>
+					<li>
+						<h2><img src="../images/zb_05.jpg" alt="" /></h2>
+						<h3>评价： <span>好评</span></h3>
+					</li>
+				</ul>
+				<div class="page2">
+					<span>[第1页/共36页]</span>
+					<span>[首页]</span>
+					<span>[上一页]</span>
+					<span>[下一页]</span>
+					<span>[尾页]</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--footer-->
+<div id="footer">
+<!--survice-->
+	<div id="survice">
+		<div id="shop">
+			<h2>购物指南</h2>
+			<ul>
+				<li>购物流程</li>
+				<li>会员介绍</li>
+				<li>发票制度</li>
+				<li>积分政策</li>
+				<li>常见问题</li>
+			</ul>	
+		</div>
+		<div id="delivery">
+			<h2>配送方式</h2>
+			<ul>
+				<li>自提服务</li>
+				<li>送货上门</li>
+				<li>配送范围及时间</li>
+				<li>配送服务查询</li>
+			</ul>	
+		</div>
+		<div id="pay">
+			<h2>支付方式</h2>
+			<ul>
+				<li>线上支付</li>
+				<li>货到付款</li>
+				<li>利群金卡支付</li>
+				<li>礼品卡支付</li>
+			</ul>	
+		</div>
+		<div id="afterSale">
+			<h2>售后服务</h2>
+			<ul>
+				<li>退换货政策</li>
+				<li>退款说明</li>
+				<li>品牌售后服务电话</li>
+				<li>投诉与建议</li>
+			</ul>	
+		</div>
+		<div id="merchant">
+			<h2>商家服务</h2>
+			<ul>
+				<li>商家入驻</li>
+				<li>商家管理规定</li>
+				<li>商家中心</li>
+			</ul>	
+		</div>
+		<div id="subscribe">
+			<h2>利群商城订阅号</h2>
+			<ul>	
+				<img src="../images/k_03.jpg" alt="" />
+			</ul>
+		</div>
+		<div id="sv">
+			<h2>利群商城服务号</h2>
+			<ul>
+				<img src="../images/k_05.jpg" alt="" />	
+				<a href="#">更多联盟商户</a>	
+			</ul>
+		</div>
+	</div>
+<!--item-->
+	<ul id="item" class="clearfix">
+		<li>
+			<i class="iconfont icon-che-tianchong"></i>
+			<div>
+				<h2>免运费</h2>
+				<h3>自营商品满68元免运费</h3>
+			</div>
+		</li>
+		<li>
+			<i class="iconfont icon-tedianzhengpinbaozhang"></i>
+			<div>
+				<h2>全正品</h2>
+				<h3>正品行货 开具利群发票</h3>
+			</div>
+		</li>
+		<li>
+			<i class="iconfont icon-maiche"></i>
+			<div>
+				<h2>最便捷</h2>
+				<h3>送货上门 可刷利群金卡</h3>
+			</div>
+		</li>
+		<li>
+			<i class="iconfont icon--jiangbei"></i>
+			<div>
+				<h2>最放心</h2>
+				<h3>售后7日内绿色退换货通道</h3>
+			</div>
+		</li>
+	</ul>
+<!--bottom-->
+	<div id="bottom">
+		<div id="list1" class="list clearfix">
+			<a href="#">关于我们</a>
+			<div></div>
+			<a href="#">联系我们</a>
+			<div></div>
+			<a href="#">诚聘英才</a>
+			<div></div>
+			<a href="#">手机利群</a>
+			<div></div>
+			<a href="#">销售联盟</a>
+			<div></div>
+			<a href="#">友情链接</a>
+			<div></div>
+			<a href="#">网站合作</a>
+			<div></div>
+			<a href="#">帮助中心</a>
+			<div></div>
+			<a href="#">版本说明</a>
+		</div>
+		<div id="list2" class="list clearfix">
+			<a href="#">利群集团</a>
+			<div></div>
+			<a href="#">百货集团</a>
+			<div></div>
+			<a href="#">利群网</a>
+			<div></div>
+			<a href="#">利群酒店</a>
+			<div></div>
+			<a href="#">利群房地产</a>
+			<div></div>
+			<a href="#">利群旅行社</a>
+			<div></div>
+			<a href="#">利群药品</a>
+			<div></div>
+			<a href="#">利群影城</a>
+			<div></div>
+			<a href="#">利群水站</a>
+			<div></div>
+			<a href="#">利群家教</a>
+		</div>
+		<p>鲁ICP证09054331号-2 Copyright&copy;2004-2015 利群集团青岛电子商务有限公司 版权所有</p>
+		<h2>
+			<img src="../images/k_14.jpg" alt="" />
+			<img src="../images/k_16.jpg" alt="" />
+			<img src="../images/k_18.jpg" alt="" />
+			<img src="../images/k_20.jpg" alt="" />
+		</h2>
+	</div>	
+</div>
+
+<script>
+var a=cookie.get("now");//登录成功后转到的页面
+if(a!=undefined){
+	//var b=a.match(/account=(.+)/)[1];
+	$("#insert").html(a);
+	$("#login>#message>h4").html("");
+	$("#login>#message>h3").css("color","#0770c1").html("退出").click(()=>{
+		var url=location.href;
+		cookie.remove("now");
+		location.href=url;				
+	});
+}
+if(cookie.get("number")){//购物车初始值
+	$("#shopCart>div").html(cookie.get("number"));
+}
+$("#login>#message>h4").click(function(){//注册点击事件
+	location.href="register.html";
+});
+$("#login>#message>h3").click(function(){//登录点击事件
+	location.href="login.html";
+});
+var lf=$(".menu1").offset().left;
+var mt=$(".menu1").offset().top;
+$("#inde").click(()=>{location.href="index.html";});//返回首页事件
+$(".menu1>li").map((ind,eve)=>{//商品选项卡切换效果
+	$(eve).click(function(){
+		$(".menu2>li").removeClass("select");
+		$(this).addClass("select");
+		switch(ind){
+			case 0:
+				$("html").animate({"scrollTop":$("#gdImg").offset().top},1000);
+				break;
+			default:
+				$("html").animate({"scrollTop":$(".menu2").offset().top},1000);
+		}
+	})
+});
+var flag=false;
+function scrollChange(){//滚动条改变事件，定位
+	var st=$(document).scrollTop();
+	//console.log(1)
+	//console.log("a:",$(".menu1").css("position"),flag)
+	if( st>mt && st<$(".page2").offset().top){
+		//if(!flag){
+			$(".menu1").css({"position":"fixed","top":4,"left":lf,"z-index":1});
+		//}
+		//flag=true;
+		if(st>$("#evaluate").offset().top){
+			$(".menu1>li").removeClass("select");
+			$(".menu1>li:eq(1)").addClass("select");			
+		}else{
+			$(".menu1>li").removeClass("select");
+			$(".menu1>li:eq(0)").addClass("select");
+		}
+	}else{
+		$(".menu1").css({"position":"static"});		
+	}
+}
+scrollChange();
+$(document).scroll(scrollChange);
+var ul=$(".evList").clone();
+var ul1=$(".evList:eq(1)").clone();
+$(".menu2>li").map((ind,eve)=>{//评价切换点击选项卡效果
+	$(eve).click(function(){
+		$(".menu2>li").removeClass("select");
+		$(this).addClass("select");
+		switch(ind){
+			case 0:
+			case 1:
+				$(".evList").remove();
+				$(".page2").before(ul);
+				break;
+			case 2:
+				ul1.find("li").eq(1).find("span").html("中评");
+				//$(".evList").replaceWith(ul1);
+				$(".evList").remove();
+				$(".page2").before(ul1);
+				break;
+			default:
+				$(".evList").remove();
+		}
+	})
+});
+var b=location.search.split("=")[1];//添加信息
+phones.forEach(function(obj,ind){
+	if(obj.id==b){
+		var num= cookie.get("g"+obj.id)?Number(cookie.get("g"+obj.id)):0;//输入框初始cookie值
+		$("#intro input[type='text']").val(num);
+		$("#detailR>h2>i").eq(0).html(obj.bind+"&gt; ");
+		$("#detailR>h2>i").eq(1).html(obj.title);
+		$("#ima").append("<img src="+'../images/'+obj.src+">");
+		$("#magnifying").append("<img src="+'../images/'+obj.src+">");
+		$("#sj2>li").map(function(ind,e){
+			if( $(e).html()==obj.bind ){
+				$(e).css("color","#cf1700");
+			}
+		});
+		$("#shop>li:eq(0)").html(obj.title);		
+		$("#shop>li:eq(2)>i").html("￥"+obj.price);
+		$("#shop>li:eq(3)>span").html(obj.weight);
+		$("#shop>li:eq(4)>span").html(obj.price/100);
+		$("#comb>div>ul>li:eq(0)>img").attr("src","../images/"+obj.src);
+		$("#comb>div>ul>li:eq(0)>h2").html(obj.title);
+		$("#comb>div>ul>li:eq(0)>h3").html("￥"+obj.price);
+		$("#pcomb>ul>li>span").html("￥"+obj.price);
+		$("#pp>div>h2").html(obj.title);
+		$("#pp>div>h3>span").html("￥"+obj.price);
+		$("#pp>img").attr("src","../images/"+obj.src);
+		$("#imag>img").attr("src","../images/"+obj.src);
+		$("#comb input[type='checkbox']").change(function(){//复选框选项改变事件
+			var sum=Number(obj.price),i=11.2;
+			$("#comb input[type='checkbox']").map(function(ind,e){//对所有复选框循环
+				var a=Number( $(e).siblings("span").html() );
+				if($(e).prop("checked")) {
+					sum+=a;
+					i+=a/100;
+				}
+			});
+			sum=sum.toFixed(2);
+			i=i.toFixed(2);
+			$("#pcomb>ul>li>span").html("￥"+sum);
+			$("#pcomb>ul>li>i").html(i);
+		});
+		$("#intro input[type='button']").click(function(){//按钮点击输入框数字增加事件
+			var v1= cookie.get("number") ? cookie.get("number") :0;//购物车的数字改变
+			if( !cookie.get("g"+obj.id) ){//cookie的数字改变
+				var num=0;
+			}else{
+				var num=Number( cookie.get("g"+obj.id) );					
+			}
+			if($(this).val()=="+"){
+				var v=Number( $("#intro input[type='text']").val() );
+				$("#intro input[type='text']").val(++v);
+				cookie.set("number",++v1,7);
+				cookie.set("g"+obj.id,++num,7);
+			}else{
+				var v=Number( $("#intro input[type='text']").val() );
+				if(num==1){
+					cookie.remove("g"+obj.id);
+					cookie.set("number",--v1,7);					
+				}else if(num>1){
+					cookie.set("number",--v1,7);
+					cookie.set("g"+obj.id,--num,7);
+				}
+				if(v>0){
+					$("#intro input[type='text']").val(--v);					
+				}
+			}			
+			$("#shopCart>div").html(v1);						
+		});
+		$("#intro input[type='text']").blur(()=>{//输入框失焦事件
+			var v=Number( $("#intro input[type='text']").val() );
+			//var v1= cookie.get("number") ? cookie.get("number") :0;//购物车的数字改变
+			//var num= cookie.get("g"+obj.id)?Number(cookie.get("g"+obj.id)):0;//cookie数字改变
+			if(isNaN(v)||v<0){
+				$("#intro input[type='text']").val(0);				
+			}/*else{
+				cookie.set("number",v1+v-num,7);
+				$("#shopCart>div").html(v1+v-num);
+				if(v<=0){
+					cookie.remove("g"+obj.id);
+				}else{
+					cookie.set("g"+obj.id,v,7);
+				}				
+			}	*/			
+		});
+		$("#ima").mousemove((e)=>{//放大镜效果
+			var h=$(document).scrollTop();
+			//console.log( e.offsetX-60,e.offsetY-60);
+			var x=e.clientX-$("#ima").offset().left-60,
+				y=e.clientY-$("#ima").offset().top-60+h;
+			/*var x=e.offsetX-60,
+				y=e.offsetY-60+h;*/
+			//console.log(e.clientX,e.clientY)
+			if(x<0) x=0;
+			if(y<0) y=0;
+			if(x>120) x=120
+			if(y>120) y=120
+			$("#mask").css({"left":x,"top":y});
+			$("#magnifying>img").css({"left":-2*x,"top":-2*y});
+		}).mouseleave(()=>{
+			$("#mask").stop().fadeOut();
+			$("#magnifying").stop().fadeOut();
+		}).mouseenter(()=>{
+			$("#mask").stop().fadeIn();
+			$("#magnifying").stop().fadeIn();
+		});
+		$("#intro>h4>img:eq(0)").click(()=>{//加入购物车事件
+			//console.log(1);
+			var img=$("#ima>img"),
+				img2=img.clone();//复制后也是jq对象
+			var top=$("#shopCart").offset().top-$("#ima").offset().top,
+				left=$("#shopCart").offset().left-$("#ima").offset().left;
+			$("#ima").append(img2.addClass("img2"));
+			//console.log(left,top);
+			img2.css({"position":"absolute","left":24,"top":20});
+			img2.animate({"left":left,"top":top,"width":32,"height":32},1000,function(){
+				img2.remove();
+				var v= cookie.get("number") ? cookie.get("number") :0;//购物车的数字改变
+				var v1=Number( $("#intro input[type='text']").val() );
+				//cookie的数字改变
+				var num=cookie.get("g"+obj.id)?Number( cookie.get("g"+obj.id) ):0;
+				cookie.set("number",v+v1-num,7);				
+				$("#shopCart>div").html(v+v1-num);
+				//$("#intro input[type='text']").val(num);	
+				cookie.set("g"+obj.id,v1,7);
+				if(v1==0) cookie.remove("g"+obj.id);
+			});
+		});
+	}
+});
+</script>
+</body>
+</html>

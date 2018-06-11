@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>利群商城首页</title>
+<link rel="stylesheet" href="/css/iconfont.css" />
+<link rel="stylesheet" href="/css/common.css" />
+<link rel="stylesheet" href="/css/common2.css" />
+<link rel="stylesheet" href="/css/index.css" />
+<script src="/js/jquery-1.11.3.js"></script>
+<script src="/js/require.js" data-main="/js/main"></script>
+<script>
+function callback(r){
+	//console.log(r.s);
+	//清空上次ul的内容
+	$(".sc").remove();
+	var v=$("#form>form>input[type='text']").val()
+	if(v!=""){
+		var ul=$("<ul></ul>"),
+			li=$("<li></li>"),
+			span=$("<span></span>");
+		$("#form>form").append(ul.addClass("sc"));
+		r.s.forEach((item,ind)=>{
+			var	li=$("<li></li>");
+			ul.append(li);
+			li.html(item);
+		});
+		ul.append(li.css({"padding-left":"363px"}).append(span.html("关闭") ));
+		//console.log(span)
+		span.click(function(){
+			console.log(1);
+			ul.hide();
+		});
+	}
+}
+</script>
+</head>
+<body>
+<!--header-->
+<div id="header">
+	<!--top-->
+<div id="top">
+	<h1>
+		<img src="../images/a_02.png" alt="logo"/>
+	</h1>
+	<div id="login" class="clearfix">
+		<div id="message" class="clearfix">
+			<% if(login){ %>
+			<h2>Hi, <span id="insert"></span> 欢迎来到利群商城！</h2>
+			<h3><a href="/login">请登录</a></h3>
+			<h4><a href="/register">免费注册</a></h4>
+			<% }else{ %>
+			<h2>Hi, <span id="insert"><%= user %></span> 欢迎来到利群商城！</h2>
+			<h3><a href="/confirm">退出</a></h3>
+			<% } %>			
+		</div>
+		<ul>
+			<li>我的订单</li>
+			<div></div>
+			<li><i class="iconfont icon-wo"></i>会员中心</li>
+			<div></div>
+			<li>客户服务<i class="iconfont icon-zelvxuanzefeiyongdaosanjiaoxingfandui"></i></li>
+			<div></div>
+			<li><i class="iconfont icon-shouji"></i>手机利群</li>
+			<div></div>
+			<li onclick="location.href='index.html';">利群官网</li>
+			<div></div>
+			<li>关注利群:</li>
+			<img src="../images/a_06.png" alt="" />
+			<img src="../images/a_08.png" alt="" />
+			<img src="../images/a_10.png" alt="" />
+		</ul>
+	</div>
+	<div id="search">
+		<h2>
+			<img src="../images/a_16.jpg" alt="" />
+		</h2>
+		<h3>
+			<img src="../images/b_03.jpg" alt="" />
+		</h3>
+		<div id="form">
+			<form onsubmit="return false;">
+				<i class="iconfont icon-fangdajing"></i>
+				<input type="text" placeholder="美赞臣"/>
+				<input type="button" value=" 搜  索"/>			
+			</form>
+			<ul>
+				<li>热门搜索:</li>
+				<li>丹姿大促</li>
+				<li>纸品联合</li>
+				<li>中秋月饼</li>
+				<li>亨氏专场</li>
+				<li>手机大促</li>
+				<li>家电阅兵</li>
+			</ul>
+		</div>
+		<div onclick="location.href='cart.html';" id="shopCart">
+			<div>0</div>
+			<i class="iconfont icon-gouwuche"></i> 去购物车结算
+		</div>
+		<div id="tel">
+			<h4>客服热线</h4>
+			<h5>4006-888-688</h5>
+		</div>
+	</div>
+</div>
+<!--nav-->
+<div id="nav">
+	<ul>
+		<li id="kind">全部商品分类</li>
+		<li id="ind">首&nbsp;&nbsp;&nbsp;&nbsp;页</li>
+		<li>利群生鲜</li>
+		<li>利群超市</li>
+		<li>母婴馆</li>
+		<li>利群团</li>
+		<li>药品商城</li>
+		<li>积分商城</li>
+		<li>水电煤缴费</li>
+	</ul>
+</div>
+</div>
+<!--line-->
+<div id="line"></div>
+<!--banner-->
+<div id="banner">
+	<ul id="list">
+		<li>
+			<h2>
+				<i class="iconfont icon-yinliao"></i>民生食品
+				<span>&gt;</span>
+			</h2>
+			<h3>粮食调味 生鲜</h3>
+		</li>
+		<li>
+			<h2>
+				<i class="iconfont icon-yinliao1"></i>零食酒水
+				<span>&gt;</span>
+			</h2>
+			<h3>休闲零食 饮料 酒</h3>
+		</li>
+		<li>
+			<h2>
+				<i class="iconfont icon-zhadan"></i>美妆洗护
+				<span>&gt;</span>
+			</h2>
+			<h3>洗护 面部护理 彩妆</h3>
+		</li>
+		<li>
+			<h2>
+				<i class="iconfont icon-bag_icon"></i>日用百货
+				<span>&gt;</span>
+			</h2>
+			<h3>生活用品 清洁 居家</h3>
+		</li>
+		<li>
+			<h2>
+				<i class="iconfont icon-muyingyongpin"></i>母婴玩具
+				<span>&gt;</span>
+			</h2>
+			<h3>奶粉 尿裤 洗护 喂养</h3>
+		</li>
+		<li id="sums">
+			<h2>
+				<i class="iconfont icon-shouji"></i>手机数码
+				<span>&gt;</span>
+			</h2>
+			<h3>手机 数码 相机 办公</h3>
+		</li>
+		<li>
+			<h2>
+				<i class="iconfont icon-pad"></i>家用电器
+				<span>&gt;</span>
+			</h2>
+			<h3>大家电 小家电 热水器</h3>
+		</li>
+		<li>
+			<h2>
+				<i class="iconfont icon-wuxianyujingguangbozhan"></i>虚拟服务
+				<span>&gt;</span>
+			</h2>
+			<h3>便民缴费 旅游 图书</h3>
+		</li>
+		<li>
+			<h2>
+				<i class="iconfont icon-jiezhi"></i>时尚名品
+				<span>&gt;</span>
+			</h2>
+			<h3>男女手表 潮流女包</h3>
+		</li>
+	</ul>
+	<div id="bannerImg">
+		<div id="shift">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div>4</div>
+			<div>5</div>
+			<div>6</div>
+			<div>7</div>
+			<div>8</div>
+		</div>
+		<ul>
+			<li><img src="/images/e_03.jpg"></li>
+			<li><img src="/images/a.jpg"></li>
+			<li><img src="/images/002.jpg"></li>
+			<li><img src="/images/003.jpg"></li>
+			<li><img src="/images/004.jpg"></li>
+			<li><img src="/images/005.jpg"></li>
+			<li><img src="/images/006.jpg"></li>
+			<li><img src="/images/008.jpg"></li>
+			<li><img src="/images/e_03.jpg"></li>
+		</ul>
+	</div>
+	<div id="news">
+		<div id="newsCon">
+			<img src="../images/c_19.jpg" alt="" />
+			<h2>利群快报</h2>
+			<ul>
+				<li id="new"><span>New</span>&nbsp;180元超级萌宝红包辣妈免费领</li>
+				<li id="li2">中国好童车 品牌精品 全场低至4折</li>
+				<li>利群员工福利-中秋风味美食大礼包</li>
+				<li>舌尖上的美味-岛城传统美食-流亭酱货</li>
+				<li>亨氏震撼低价 宝宝辅食全场低至7.5折</li>
+				<li>厨房日用爆款直降 会员尊享超值满赠</li>
+				<li>丹姿品牌全线上架 16元起</li>
+				<li>婴之侣精选尖货 宝宝用品全场低至6.5折</li>
+			</ul>
+		</div>
+		<div id="dot">
+			<span>●</span>
+			<span>●</span>
+			<span>●</span>
+		</div>
+		<div id="grape">
+			<h2>玫瑰香葡萄</h2>
+			<h3>5斤50包邮</h3>
+			<h4>大泽山现摘葡萄</h4>
+			<h5>点击进入 | GO</h5>
+		</div>
+		<div id="fill"></div>
+	</div>
+</div>
+<!--bargain-->
+<div id="bargain">
+	<div id="clock">
+		<i class="iconfont icon-naozhong"></i>
+		<h2>精品促销</h2>
+	</div>
+	<div id="goods">
+		<h2 id="l"><</h2>
+		<h3 id="g">></h3>
+		<div>
+			<h2>专注婴幼儿游泳产品</h2>
+			<h3>低至5折起</h3>
+			<h4>点击进入 GO</h4>
+		</div>
+		<div>
+			<h2>童车专场</h2>
+			<h3>全场低至4折起</h3>
+			<h4>点击进入 GO</h4>
+		</div>
+		<div>
+			<h2>正青春 不将就</h2>
+			<h3>热销电脑专场</h3>
+			<h4>点击进入 GO</h4>
+		</div>
+		<div>
+			<h2>狂甩一件不留</h2>
+			<h3>酒水进口食水大清仓</h3>
+			<h4>点击进入 GO</h4>
+		</div>
+	</div>
+</div>
+<!--rush-->
+<div id="rush" class="clearfix">
+	<img src="/images/z_03.jpg" alt="" />
+	<ul id="goodsList1">
+		
+	</ul>
+	<div id="goods-img">
+		<img src="/images/z_05.jpg" alt="" />
+		<img src="/images/z_25.jpg" alt="" />
+	</div>
+</div>
+<!--banner2-->
+<div id="banner2">
+	<img src="/images/z_32.jpg" alt="" />
+</div>
+<!--floor-->
+<div id="floor"></div>
+<!--footer-->
+<div id="footer">
+	<!--survice-->
+<div id="survice">
+	<div id="shop">
+		<h2>购物指南</h2>
+		<ul>
+			<li>购物流程</li>
+			<li>会员介绍</li>
+			<li>发票制度</li>
+			<li>积分政策</li>
+			<li>常见问题</li>
+		</ul>	
+	</div>
+	<div id="delivery">
+		<h2>配送方式</h2>
+		<ul>
+			<li>自提服务</li>
+			<li>送货上门</li>
+			<li>配送范围及时间</li>
+			<li>配送服务查询</li>
+		</ul>	
+	</div>
+	<div id="pay">
+		<h2>支付方式</h2>
+		<ul>
+			<li>线上支付</li>
+			<li>货到付款</li>
+			<li>利群金卡支付</li>
+			<li>礼品卡支付</li>
+		</ul>	
+	</div>
+	<div id="afterSale">
+		<h2>售后服务</h2>
+		<ul>
+			<li>退换货政策</li>
+			<li>退款说明</li>
+			<li>品牌售后服务电话</li>
+			<li>投诉与建议</li>
+		</ul>	
+	</div>
+	<div id="merchant">
+		<h2>商家服务</h2>
+		<ul>
+			<li>商家入驻</li>
+			<li>商家管理规定</li>
+			<li>商家中心</li>
+		</ul>	
+	</div>
+	<div id="subscribe">
+		<h2>利群商城订阅号</h2>
+		<ul>	
+			<img src="../images/k_03.jpg" alt="" />
+		</ul>
+	</div>
+	<div id="sv">
+		<h2>利群商城服务号</h2>
+		<ul>
+			<img src="../images/k_05.jpg" alt="" />	
+			<a href="#">更多联盟商户</a>	
+		</ul>
+	</div>
+</div>
+<!--item-->
+<ul id="item" class="clearfix">
+	<li>
+		<i class="iconfont icon-che-tianchong"></i>
+		<div>
+			<h2>免运费</h2>
+			<h3>自营商品满68元免运费</h3>
+		</div>
+	</li>
+	<li>
+		<i class="iconfont icon-tedianzhengpinbaozhang"></i>
+		<div>
+			<h2>全正品</h2>
+			<h3>正品行货 开具利群发票</h3>
+		</div>
+	</li>
+	<li>
+		<i class="iconfont icon-maiche"></i>
+		<div>
+			<h2>最便捷</h2>
+			<h3>送货上门 可刷利群金卡</h3>
+		</div>
+	</li>
+	<li>
+		<i class="iconfont icon--jiangbei"></i>
+		<div>
+			<h2>最放心</h2>
+			<h3>售后7日内绿色退换货通道</h3>
+		</div>
+	</li>
+</ul>
+<!--bottom-->
+<div id="bottom">
+	<div id="list1" class="list clearfix">
+		<a href="#">关于我们</a>
+		<div></div>
+		<a href="#">联系我们</a>
+		<div></div>
+		<a href="#">诚聘英才</a>
+		<div></div>
+		<a href="#">手机利群</a>
+		<div></div>
+		<a href="#">销售联盟</a>
+		<div></div>
+		<a href="#">友情链接</a>
+		<div></div>
+		<a href="#">网站合作</a>
+		<div></div>
+		<a href="#">帮助中心</a>
+		<div></div>
+		<a href="#">版本说明</a>
+	</div>
+	<div id="list2" class="list clearfix">
+		<a href="#">利群集团</a>
+		<div></div>
+		<a href="#">百货集团</a>
+		<div></div>
+		<a href="#">利群网</a>
+		<div></div>
+		<a href="#">利群酒店</a>
+		<div></div>
+		<a href="#">利群房地产</a>
+		<div></div>
+		<a href="#">利群旅行社</a>
+		<div></div>
+		<a href="#">利群药品</a>
+		<div></div>
+		<a href="#">利群影城</a>
+		<div></div>
+		<a href="#">利群水站</a>
+		<div></div>
+		<a href="#">利群家教</a>
+	</div>
+	<p>鲁ICP证09054331号-2 Copyright&copy;2004-2015 利群集团青岛电子商务有限公司 版权所有</p>
+	<h2>
+		<img src="/images/k_14.jpg" alt="" />
+		<img src="/images/k_16.jpg" alt="" />
+		<img src="/images/k_18.jpg" alt="" />
+		<img src="/images/k_20.jpg" alt="" />
+	</h2>
+</div>
+</div>
+</body>
+
+</html>

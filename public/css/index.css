@@ -1,0 +1,377 @@
+#bargain, #rush, #banner2, #floor {
+  width: 1200px;
+  margin: 0 auto; }
+
+/*line*/
+#line {
+  height: 2px;
+  background: #b1191b; }
+
+/*banner*/
+#banner {
+  height: 461px; }
+  #banner > * {
+    float: left; }
+  #banner > #list {
+    height: 451px;
+    background: #c81622;
+    width: 190px;
+    position: relative; }
+    #banner > #list > li {
+      height: 50px;
+      cursor: pointer; }
+      #banner > #list > li > h2 {
+        font-size: 14px;
+        line-height: 31px;
+        color: #fff;
+        text-indent: 27px; }
+        #banner > #list > li > h2 > span {
+          margin-left: 70px; }
+      #banner > #list > li > h3 {
+        font-size: 12px;
+        line-height: 12px;
+        color: #fff;
+        text-indent: 46px; }
+    #banner > #list > li:hover {
+      background: #b1191b; }
+  #banner > #bannerImg {
+    /**/
+    overflow: hidden;
+    width: 740px;
+    height: 445px;
+    margin: 5px 9px 0 8px;
+    position: relative; }
+    #banner > #bannerImg > ul {
+      height: 445px;
+      width: 6660px;
+      position: absolute;
+      z-index: -1; }
+      #banner > #bannerImg > ul > li {
+        float: left; }
+        #banner > #bannerImg > ul > li > img {
+          width: 740px;
+          height: 445px; }
+    #banner > #bannerImg > #shift {
+      width: 208px;
+      height: 20px;
+      position: absolute;
+      bottom: 5px;
+      left: 266px; }
+      #banner > #bannerImg > #shift > div {
+        width: 20px;
+        float: left;
+        margin-right: 6px;
+        background: #656565;
+        color: #bababa;
+        text-align: center;
+        height: 20px;
+        border-radius: 10px;
+        cursor: pointer; }
+  #banner > #news {
+    background: #ededed;
+    height: 451px;
+    width: 253px;
+    font-size: 12px;
+    color: #b3b2b2; }
+    #banner > #news > #newsCon {
+      width: 251px;
+      margin: 0 auto;
+      background: #fff;
+      height: 251px;
+      border-bottom: 1px solid #ddd; }
+      #banner > #news > #newsCon > h2 {
+        font-size: 14px;
+        color: #6b6b6b;
+        line-height: 14px;
+        margin: 17px 0 14px 12px;
+        font-weight: 900; }
+      #banner > #news > #newsCon > ul {
+        margin-left: 12px; }
+        #banner > #news > #newsCon > ul > li {
+          line-height: 22px;
+          cursor: pointer; }
+        #banner > #news > #newsCon > ul > #new, #banner > #news > #newsCon > ul > #li2 {
+          color: #ff0000; }
+        #banner > #news > #newsCon > ul > #new > * {
+          float: left; }
+        #banner > #news > #newsCon > ul > #new > span {
+          width: 28px;
+          height: 13px;
+          border-radius: 7px;
+          background: #ed3130;
+          color: #fff;
+          display: block;
+          text-align: center;
+          line-height: 13px;
+          font-size: 10px;
+          margin-top: 5px; }
+    #banner > #news > #dot {
+      height: 30px;
+      line-height: 30px;
+      font-size: 20px;
+      padding-left: 190px; }
+    #banner > #news > #grape {
+      height: 135px;
+      width: 238px;
+      margin: 0 auto;
+      background: url(../images/g_03.jpg) no-repeat top 32px right 0 #fff;
+      padding: 32px 0 0 13px; }
+      #banner > #news > #grape > h2 {
+        color: #6c6c6c;
+        font-size: 16px;
+        line-height: 16px;
+        margin: 0 0 7px;
+        font-weight: 900; }
+      #banner > #news > #grape > h3 {
+        font-size: 18px;
+        line-height: 18px;
+        color: #df3838;
+        font-weight: 900; }
+      #banner > #news > #grape > h4 {
+        color: #6c6c6c;
+        font-size: 16px;
+        line-height: 16px;
+        margin: 5px 0 33px;
+        font-weight: 900; }
+      #banner > #news > #grape > h5 {
+        background: #000;
+        color: #fff;
+        width: 93px;
+        border: 1px solid;
+        text-align: center;
+        border-color: #4f4f4f #7f7f7f #cfcfcf #101010;
+        font-size: 12px;
+        cursor: pointer; }
+    #banner > #news > #fill {
+      width: 251px;
+      margin: 0 auto;
+      background: #fff;
+      height: 1px; }
+
+/*bargain*/
+#bargain {
+  height: 136px; }
+  #bargain > #clock {
+    height: 116px;
+    width: 190px;
+    background: url(../images/h_03.jpg);
+    color: #fff;
+    text-align: center;
+    padding-top: 20px;
+    float: left; }
+    #bargain > #clock > i {
+      font-size: 60px; }
+    #bargain > #clock > h2 {
+      font-weight: 800; }
+  #bargain > #goods {
+    background: #ccc;
+    width: 1009px;
+    height: 136px;
+    float: right;
+    position: relative; }
+    #bargain > #goods > div:nth-of-type(1) {
+      background: url(../images/j_1.jpg) no-repeat right 9px top 18px #fff; }
+    #bargain > #goods > div:nth-of-type(2) {
+      background: url(../images/j_2.jpg) no-repeat right 9px top 18px #fff; }
+    #bargain > #goods > div:nth-of-type(3) {
+      background: url(../images/j_3.jpg) no-repeat right 9px top 18px #fff; }
+    #bargain > #goods > div:nth-of-type(4) {
+      background: url(../images/j_4.jpg) no-repeat right 9px top 18px #fff; }
+    #bargain > #goods > div {
+      width: 236px;
+      height: 134px;
+      margin: 1px 0 0 1px;
+      padding-left: 15px;
+      float: left; }
+      #bargain > #goods > div > h2 {
+        font-size: 12px;
+        line-height: 12px;
+        color: #646464;
+        padding-top: 20px; }
+      #bargain > #goods > div > h3 {
+        font-size: 16px;
+        line-height: 16px;
+        color: #e5415d;
+        margin: 4px 0 42px; }
+      #bargain > #goods > div > h4 {
+        font-size: 12px;
+        line-height: 20px;
+        color: #fff;
+        width: 84px;
+        height: 20px;
+        background: #c20000;
+        text-align: center;
+        border-radius: 4px;
+        cursor: pointer; }
+    #bargain > #goods > #l, #bargain > #goods > #g {
+      position: absolute;
+      font-size: 48px;
+      line-height: 48px;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.5);
+      top: 44px;
+      width: 28px;
+      cursor: pointer;
+      letter-spacing: -20px; }
+    #bargain > #goods > #g {
+      right: 1px; }
+    #bargain > #goods > #l {
+      left: 1px; }
+
+.menu {
+  height: 443px;
+  width: 752px;
+  border: 1px solid #ec2e2e;
+  font-size: 12px;
+  line-height: 12px;
+  color: #777;
+  position: absolute;
+  top: 0;
+  left: 190px;
+  background: #fff;
+  z-index: 1;
+  display: none; }
+  .menu > li:first-child > h2 > span {
+    color: #ee2d30; }
+  .menu > li:first-child > p:first-of-type > span:first-child {
+    color: #ee2d30; }
+
+.menu-t {
+  width: 233px;
+  padding: 19px 0 0 13px;
+  float: left;
+  height: 202px; }
+  .menu-t > h2 {
+    font-size: 12px;
+    line-height: 28px;
+    color: #000;
+    font-weight: 900;
+    border-bottom: 1px solid #000;
+    padding: 0 11px 0 46px; }
+    .menu-t > h2 > span {
+      float: right; }
+  .menu-t > h3 {
+    font-weight: 800;
+    color: #535154;
+    line-height: 24px;
+    font-size: 12px; }
+  .menu-t > p > span {
+    padding: 0 7px 0 8px;
+    line-height: 20px;
+    border-right: 1px solid #eee; }
+  .menu-t > p:first-of-type {
+    border-bottom: 1px dashed #666; }
+
+/*rush*/
+#rush {
+  padding: 25px 0 16px; }
+  #rush > * {
+    float: left; }
+  #rush > #goods-img {
+    padding-left: 15px; }
+  #rush #goodsList1 {
+    background: #e2e2e2;
+    width: 796px;
+    height: 499px; }
+    #rush #goodsList1 > li {
+      background: #fff;
+      float: left;
+      width: 198px;
+      height: 248px;
+      margin: 1px 1px 0 0; }
+      #rush #goodsList1 > li > img {
+        padding: 11px 0 0 19px;
+        cursor: pointer; }
+      #rush #goodsList1 > li > h2 {
+        font-size: 12px;
+        line-height: 20px;
+        color: #929292;
+        padding-left: 11px;
+        letter-spacing: -1px;
+        cursor: pointer; }
+      #rush #goodsList1 > li > h3 {
+        font-size: 12px;
+        line-height: 20px;
+        color: #929292;
+        padding-left: 11px; }
+        #rush #goodsList1 > li > h3 > span {
+          color: #ef3133; }
+      #rush #goodsList1 > li > h4 {
+        font-size: 12px;
+        line-height: 20px;
+        color: #ef3133;
+        text-align: center; }
+        #rush #goodsList1 > li > h4 > .icon-naozhong {
+          color: #ff295f; }
+
+#banner2 {
+  margin-bottom: 13px; }
+
+/*floor*/
+#floor > div {
+  margin-bottom: 22px; }
+  #floor > div > div {
+    float: left; }
+  #floor > div > .floorLeft {
+    width: 193px;
+    height: 423px; }
+    #floor > div > .floorLeft > h2 {
+      height: 53px;
+      font-size: 22px;
+      line-height: 53px;
+      color: #fff; }
+      #floor > div > .floorLeft > h2 > span:first-child {
+        margin: 0 26px 0 16px; }
+    #floor > div > .floorLeft > ul > li {
+      width: 96px;
+      font-size: 12px;
+      line-height: 30px;
+      color: #555;
+      float: left;
+      text-indent: 12px; }
+  #floor > div > div:last-child > ul {
+    background: url(../images/t_03.jpg) no-repeat left 0 bottom; }
+    #floor > div > div:last-child > ul li {
+      float: left;
+      padding-left: 52px;
+      height: 38px;
+      font-size: 14px;
+      line-height: 38px;
+      color: #555; }
+    #floor > div > div:last-child > ul > li:first-child {
+      color: #e4393c; }
+  #floor > div > div:last-child > div > * {
+    float: left; }
+  #floor > div > div:last-child > div > ul {
+    width: 594px; }
+    #floor > div > div:last-child > div > ul li {
+      float: left;
+      width: 197px;
+      height: 191px;
+      border-right: 1px solid #f4f4f4;
+      border-bottom: 1px solid #f4f4f4; }
+      #floor > div > div:last-child > div > ul li > img {
+        margin: 0 auto; }
+      #floor > div > div:last-child > div > ul li > h2 {
+        font-size: 12px;
+        line-height: 12px;
+        color: #929292;
+        padding: 12px 0 0 18px;
+        letter-spacing: -1px; }
+      #floor > div > div:last-child > div > ul li > h4 {
+        font-size: 12px;
+        line-height: 30px;
+        color: #e5383c;
+        padding-left: 18px; }
+        #floor > div > div:last-child > div > ul li > h4 > span {
+          background: #b5b4b4;
+          margin-left: 40px;
+          border-radius: 7px;
+          color: #fff;
+          padding: 0 6px 0; }
+  #floor > div > .floorR1 {
+    width: 723px;
+    padding-left: 1px; }
+  #floor > div > .floorR2 {
+    width: 588px;
+    padding-left: 1px; }

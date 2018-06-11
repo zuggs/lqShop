@@ -1,0 +1,188 @@
+/*top*/
+#top,#nav,#banner,#item,#bottom{width:1200px;margin:0 auto;}
+@mixin font($a,$b,$c){font-size:$a;line-height:$b;color:$c;}
+#top{
+    height:197px;
+    >h1>img{
+        width:1200px;height:70px;
+    }
+    >#login>*{float:left;font-size:12px;color:#777;line-height:30px;cursor:pointer;}
+    >#login>#message>*{float:left;font-size:12px;color:#777;line-height:30px;}
+    >#login>#message{width:595px;}
+    >#login>#message>h2{
+        height:30px;cursor:auto;
+        span{color:#0770c1;}
+    }
+    >#login>#message>h3{
+        height:30px;margin:0 13px 0 20px;
+    }
+    >#login>#message>h4{
+        height:30px;
+    }
+    >#login>ul{
+        >*{      
+            float:left;
+        }
+        >li{
+            padding:0 16px;
+            @for $i from 1 to 4{
+               >i:nth-of-type(#{$i}){
+                   color:#c20200;
+               } 
+            };
+        }
+        >li:nth-of-type(3)>i{font-size:10px;}
+        >li:nth-of-type(4) {padding-right:24px;}
+        @mixin bg($c){
+            height:12px;width:1px;background:$c;margin-top:7px;
+        }
+        @for $i from 1 to 6{
+            >div:nth-of-type(#{$i}){                          
+                @if $i == 4{
+                    @include bg(#777); 
+                }@else{
+                    @include bg(#ccc);
+                }
+            }
+        }
+        >img{
+            width:16px;height:16px;margin:6px 5px 0 0;
+        }
+    } 
+    >#search{
+        height:94px;
+        >*{float:left}
+        >h2{
+            margin:25px 15px 0 2px;
+        }
+        >h3{
+            margin:12px 32px 0 0;
+        }
+        >#form{
+            >form{
+                width:534px;height:35px;border:3px solid #fc595a;margin:22px 0 0 0;
+                font-size:16px;color:#cdcdcd;line-height:35px;position:relative;
+                z-index:2;
+                >i{width:29px;text-align:center;}
+                >*{float:left;border:0;}
+                >input[type="text"]{
+                    width:450px;height:35px;
+                }
+                >input[type="button"]{
+                    width:534px - 450px - 29px;height:35px;background:#fc595a;color:#fff;
+                    font-size:14px;font-weight:900;cursor:pointer;
+                }
+                >.sc{
+                    position:absolute;left:31px;top:37px;width:420px;background:#fff;
+                    border:1px solid #fc595a;@include font(12px,25px,#777);text-indent:8px;
+                    li span{cursor: pointer}
+                }
+            }
+            >ul{
+                height:20px;
+                >li{
+                    float:left;font-size:12px;line-height:12px;padding:8px 5px 0;color:#777;
+                }
+                >li:first-child{
+                    color:#555;padding-right:13px;
+                }
+                
+            }
+        }
+        @mixin box{
+            height:30px;border:1px solid #efefef;cursor:pointer;color:#636363;
+            margin-top:27px;font-size:12px;
+        }
+        >#shopCart{
+            line-height:30px;@include box;
+            padding-left:8px;margin:27px 15px 0 22px;width:112px;background:
+            url(../images/c_09.jpg) no-repeat right 9px center #f8f8f8;position:relative;
+            >i{color:#cdcdcd;}
+            >div{
+                width:18px;height:20px;background:url(../images/c_03.jpg);position:absolute;
+                left:14px;top:-9px;color:#fff;line-height:20px;text-align:center;
+                font-size:8px;
+            }                 
+        }
+        >#tel{
+            @include box;width:96px;border-left:0;background:url(../images/c_06.jpg) no-repeat 
+            left 9px center #f8f8f8;padding-left:32px;          
+            >h4,>h5{
+                font-size:12px;line-height:14px;
+            }
+            >h5{
+                color:#e33f3e;
+            }
+        }
+    } 
+}
+/*nav*/
+#nav{
+    height:35px;background:url(../images/c_15.jpg) no-repeat right 15px center;
+    >ul{
+        >li{
+            float:left;height:35px;line-height:35px;text-align:center;padding:0 20px 0;
+            color:#525252;
+        }
+        >#kind{
+            color:#fff;width:150px;font-weight:900;background:#b1191b;            
+        }
+        >#ind{
+            width:55px;color:#f13031;font-weight:900;
+        }
+    }
+}
+/*survice*/
+#survice{
+    width:1178px;margin:0 auto;border:1px solid #e3e3e3;height:190px;padding-left:20px;
+    >*{float:left}
+    >div{
+        width:130px;margin-right:40px;text-align:center;
+        >h2{
+            @include font(14px,14px,#bebebe);font-weight:900;padding:28px 0 8px 10px;
+        }
+        >ul{
+            >img{               
+                padding:10px 0 10px;
+            }
+            >a{@include font(12px,12px,#929292);padding-left:5px;}
+            border-top:1px solid #e3e3e3;padding-left:15px;
+            >li{
+                list-style:square inside;@include font(12px,21px,#929292);
+            }
+        }
+    }
+    >div:last-child{margin-right:0}
+}
+/*item*/
+#item{
+    
+    >li{
+        float:left;width:(1200px / 4);height:163px;
+        >*{float:left}
+        >i{@include font(44px,44px,#c40001);margin:66px 14px 0 34px;}
+        >div{
+            h2{@include font(22px,22px,#000);margin:66px 0 12px;}
+            h3{@include font(14px,14px,#939393);}
+        }
+    }
+}
+/*botttom*/
+#bottom{
+    >.list{
+        margin:0 auto;margin-left:282px;
+        >*{float:left;}
+        >div{width:1px;height:12px;background:#878787;}
+        >a{
+            @include font(12px,12px,#929292);padding:2px 11px 14px;
+        }
+    }
+    >#list2{
+        margin-left:242px;
+    }
+    >p{text-align:center;@include font(12px,12px,#bdbdbd);}
+    >h2{
+        padding-left:331px;
+        >img{float:left;padding:11px 9px 15px;}
+    }
+}

@@ -1,0 +1,243 @@
+#bargain,#rush,#banner2,#floor{width:1200px;margin:0 auto;}
+@mixin font($a,$b,$c){font-size:$a;line-height:$b;color:$c;}
+/*line*/
+#line{
+    height:2px;background:#b1191b;
+}
+/*banner*/
+#banner{
+    height:461px;
+    >*{float:left}
+    >#list{
+        height:451px;background:#c81622;width:190px;position:relative;
+        >li{          
+            height:50px;cursor:pointer;
+            >h2{
+                @include font(14px,31px,#fff);text-indent:27px;
+                >span{margin-left:70px;}
+            }
+            >h3{
+                @include font(12px,12px,#fff);text-indent:46px;
+            }
+        }
+        >li:hover{background:#b1191b;}
+        
+    }
+    >#bannerImg{
+    /**/overflow:hidden;width:740px;height:445px;margin:5px 9px 0 8px;position:relative;
+        >ul{
+            height:445px;width:740px * 9;position:absolute;z-index:-1;
+            >li{float:left;           
+               >img {width:740px;height:445px;}
+            }
+        }
+        >#shift{
+            width:26 * 8px;height:20px;position:absolute;bottom:5px;
+            left:((740px - 26px*8)/ 2);
+            >div{
+                width:20px;float:left;margin-right:6px;background:#656565;color:#bababa;
+                text-align:center;height:20px;border-radius:10px;cursor:pointer;
+            }
+        }
+    }
+    >#news{
+        background:#ededed;height:451px;width:253px;font-size:12px;color:#b3b2b2;
+        @mixin set($a,$b){width:$a;margin:0 auto;background:#fff;height:$b;}
+        >#newsCon{
+            @include set(251px,251px);border-bottom:1px solid #ddd;
+            >h2{
+                font-size:14px;color:#6b6b6b;line-height:14px;margin:17px 0 14px 12px;
+                font-weight:900
+            }
+            >ul{
+                margin-left:12px;
+                >li{
+                    line-height:22px;cursor:pointer;
+                }
+                >#new,>#li2{
+                    color:#ff0000;
+                }
+                >#new{
+                    >*{float:left}
+                    >span{
+                        width:28px;height:13px;border-radius:7px;background:#ed3130;
+                        color:#fff;display:block;text-align:center;line-height:13px;
+                        font-size:10px;margin-top:5px;
+                    }
+                }
+            }
+        }
+        >#dot{
+            height:30px;line-height:30px;font-size:20px;padding-left:190px;                     
+        }
+        >#grape{
+            height:135px;width:238px;margin:0 auto;background:url(../images/g_03.jpg) no-repeat top 32px right 0 #fff;padding:32px 0 0 13px;
+            @mixin hs($a,$b){color:#6c6c6c;font-size:16px;line-height:16px;margin:$a 0 $b;font-weight:900;}
+            >h2{
+                @include hs(0,7px);
+            }
+            >h3{
+                font-size:18px;line-height:18px;color:#df3838;font-weight:900;
+            }
+            >h4{
+                @include hs(5px,33px);
+            }
+            >h5{
+                background:#000;color:#fff;width:93px;border:1px solid;text-align:center;
+                border-color:#4f4f4f #7f7f7f #cfcfcf #101010;font-size:12px;cursor:pointer;
+            }
+        }
+        >#fill{
+            @include set(251px,1px);
+        }
+    }
+}
+/*bargain*/
+#bargain{
+    height:136px;
+    //>*{float:left}
+    >#clock{        
+        height:116px;width:190px;background:url(../images/h_03.jpg);color:#fff;
+        text-align:center;padding-top:20px;float:left;
+        >i{font-size:60px;}
+        >h2{font-weight:800}
+    }
+    >#goods{
+        background:#ccc;width:1009px;height:136px;float:right;position:relative;
+        //>*{}
+        @for $i from 1 to 5 {
+                >div:nth-of-type(#{$i}){
+                    background:url(../images/j_#{$i}.jpg) no-repeat right 9px top 18px #fff; 
+                }  
+            }
+        >div{
+            width:236px;height:134px;margin:1px 0 0 1px;padding-left:15px;float:left;
+            >h2{
+                @include font(12px,12px,#646464);padding-top:20px;
+            }
+            >h3{
+                @include font(16px,16px,#e5415d);margin:4px 0 42px;
+            }
+            >h4{
+                @include font(12px,20px,#fff);width:84px;height:20px;background:#c20000;
+                text-align:center;border-radius:4px;cursor:pointer;
+            }      
+        }
+        >#l,>#g{
+            position:absolute;@include font(48px,48px,#fff);background:rgba(0,0,0,.5);
+            top:((136px - 48px)/2);width:28px;cursor:pointer;letter-spacing:-20px;
+        }
+        >#g{right:1px;}
+        >#l{left:1px;}
+    }
+}
+.menu{
+    height:443px;width:752px;border:1px solid #ec2e2e;@include font(12px,12px,#777);
+    position:absolute;top:0;left:190px;background:#fff;z-index:1;display:none;
+    >li:first-child{
+        >h2>span{color:#ee2d30;}
+        >p:first-of-type>span:first-child{color:#ee2d30;}
+    }
+    //display:block;
+}
+.menu-t{
+    width:233px;padding:19px 0 0 13px;float:left;height:202px;
+    >h2{
+        @include font(12px,28px,#000);font-weight:900;border-bottom:1px solid #000;
+        padding:0 11px 0 46px;
+        >span{
+            float:right;
+        }
+    }
+    >h3{font-weight:800;color:#535154;line-height:24px;font-size:12px}
+    >p{      
+        >span{
+            padding:0 7px 0 8px;line-height:20px;border-right:1px solid #eee;
+        }
+    }
+    >p:first-of-type{ border-bottom:1px dashed #666;}
+}
+/*rush*/
+#rush{
+     >*{float:left;}padding:25px 0 16px;
+     >#goods-img{padding-left:15px;}
+     #goodsList1{
+         background:#e2e2e2;width:796px;height:499px;
+         >li{
+            background:#fff;float:left;width:198px;height:248px;margin:1px 1px 0 0;
+            >img{padding:11px 0 0 19px;cursor:pointer;}
+            >h2{@include font(12px,20px,#929292);padding-left:11px;letter-spacing:-1px;cursor:pointer;}
+            >h3{
+                @include font(12px,20px,#929292);padding-left:11px;
+                >span{color:#ef3133}
+            }
+            >h4{@include font(12px,20px,#ef3133);text-align:center;
+                >.icon-naozhong{color:#ff295f;}
+            }
+         }
+     }
+}
+#banner2{margin-bottom:13px;}
+/*floor*/
+#floor{
+    >div{
+        margin-bottom:22px;
+        >div{float:left}
+        >.floorLeft{
+            width:193px;height:423px;
+            >h2{
+                height:53px;@include font(22px,53px,#fff);
+                >span:first-child{margin: 0 26px 0 16px}
+            }
+            >ul{
+                >li{
+                    width:( 192px / 2 );@include font(12px,30px,#555);float:left;
+                    text-indent:12px;
+                }
+            }
+        }
+        >div:last-child{
+            >ul{
+                background:url(../images/t_03.jpg) no-repeat left 0 bottom;
+                li{
+                    float:left;padding-left:52px;height:38px;@include font(14px,38px,#555);                
+                }
+                >li:first-child{color:#e4393c}
+            }
+            >div{
+                >*{float:left}
+                >ul{
+                    width:594px;
+                    li{
+                        >img{margin:0 auto;}
+                        >h2{
+                            @include font(12px,12px,#929292);padding:12px 0 0 18px;
+                            letter-spacing:-1px;
+                        }
+                        >h4{
+                             @include font(12px,30px,#e5383c);padding-left:18px;
+                            >span{background:#b5b4b4;margin-left:40px;border-radius:7px;color:#fff;
+                            padding:0 6px 0}
+                        }
+                        float:left;width:197px;height:191px;border-right:1px solid #f4f4f4;
+                        border-bottom:1px solid #f4f4f4;
+                    }
+                }
+            }
+        }
+        >.floorR1{
+            width:723px;padding-left:1px;
+        }
+        >.floorR2{
+           width:588px;padding-left:1px;
+        }
+    }
+}
+
+
+
+
+
+
+
+

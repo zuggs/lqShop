@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../css/common.css" />
+<link rel="stylesheet" href="../css/common2.css" />
+<link rel="stylesheet" href="../css/list.css" />
+<link rel="stylesheet" href="../css/iconfont.css" />
+<script src="../js/require.js" data-main="../js/list"></script>
+<script src="../js/jquery-1.11.3.js"></script>
+<script>
+function callback(r){
+	//console.log(r.s);
+	//清空上次ul的内容
+	$(".sc").remove();
+	var v=$("#form>form>input[type='text']").val()
+	if(v!=""){
+		var ul=$("<ul></ul>"),
+			li=$("<li></li>"),
+			span=$("<span></span>");
+		$("#form>form").append(ul.addClass("sc"));
+		r.s.forEach((item,ind)=>{
+			var	li=$("<li></li>");
+			ul.append(li);
+			li.html(item);
+		});
+		ul.append(li.css({"padding-left":"363px"}).append(span.html("关闭") ));
+		//console.log(span)
+		span.click(function(){
+			//console.log(1);
+			ul.hide();
+		});
+	}
+}
+</script>
+<title>利群列表页</title>
+</head>
+<body>
+<!--header-->
+<div id="header">
+	<!--top-->
+<div id="top">
+		<h1>
+			<img src="../images/a_02.png" alt="logo"/>
+		</h1>
+		<div id="login" class="clearfix">
+			<div id="message" class="clearfix">
+				<% if(login){ %>
+				<h2>Hi, <span id="insert"></span> 欢迎来到利群商城！</h2>
+				<h3><a href="/login">请登录</a></h3>
+				<h4><a href="/register">免费注册</a></h4>
+				<% }else{ %>
+				<h2>Hi, <span id="insert"><%= user %></span> 欢迎来到利群商城！</h2>
+				<h3><a href="/confirm">退出</a></h3>
+				<% } %>			
+			</div>
+			<ul>
+				<li>我的订单</li>
+				<div></div>
+				<li><i class="iconfont icon-wo"></i>会员中心</li>
+				<div></div>
+				<li>客户服务<i class="iconfont icon-zelvxuanzefeiyongdaosanjiaoxingfandui"></i></li>
+				<div></div>
+				<li><i class="iconfont icon-shouji"></i>手机利群</li>
+				<div></div>
+				<li onclick="location.href='index.html';">利群官网</li>
+				<div></div>
+				<li>关注利群:</li>
+				<img src="../images/a_06.png" alt="" />
+				<img src="../images/a_08.png" alt="" />
+				<img src="../images/a_10.png" alt="" />
+			</ul>
+		</div>
+		<div id="search">
+			<h2>
+				<img src="../images/a_16.jpg" alt="" />
+			</h2>
+			<h3>
+				<img src="../images/b_03.jpg" alt="" />
+			</h3>
+			<div id="form">
+				<form onsubmit="return false;">
+					<i class="iconfont icon-fangdajing"></i>
+					<input type="text" placeholder="美赞臣"/>
+					<input type="button" value=" 搜  索"/>			
+				</form>
+				<ul>
+					<li>热门搜索:</li>
+					<li>丹姿大促</li>
+					<li>纸品联合</li>
+					<li>中秋月饼</li>
+					<li>亨氏专场</li>
+					<li>手机大促</li>
+					<li>家电阅兵</li>
+				</ul>
+			</div>
+			<div onclick="location.href='cart.html';" id="shopCart">
+				<div>0</div>
+				<i class="iconfont icon-gouwuche"></i> 去购物车结算
+			</div>
+			<div id="tel">
+				<h4>客服热线</h4>
+				<h5>4006-888-688</h5>
+			</div>
+		</div>
+	</div>
+	<!--nav-->
+	<div id="nav">
+		<ul>
+			<li id="kind">全部商品分类</li>
+			<li id="ind">首&nbsp;&nbsp;&nbsp;&nbsp;页</li>
+			<li>利群生鲜</li>
+			<li>利群超市</li>
+			<li>母婴馆</li>
+			<li>利群团</li>
+			<li>药品商城</li>
+			<li>积分商城</li>
+			<li>水电煤缴费</li>
+		</ul>
+	</div>
+</div>
+<!--list-->
+<div id="list">
+	<h2>全部结果 &gt;<span> “手机”</span></h2>
+	<div id="gd" class="clearfix">
+		<div id="gdLeft">
+			<ul id="gdKind">
+				<li>所有类目</li>
+				<li>手机通讯
+					<ul>
+						<li>手机</li>
+					</ul>
+				</li>
+				<li>配 件
+					<ul>
+						<li>耳机</li>
+						<li>充电器</li>
+						<li>蓝牙耳机</li>
+						<li>夜游宝</li>
+					</ul>
+				</li>
+				<li>汽车用品
+					<ul>
+						<li>车载蓝牙</li>
+						<li>汽车抹布</li>
+						<li>备胎</li>
+						<li>汽油</li>
+					</ul>
+				</li>
+				<li>潮流女包
+					<ul>
+						<li>LV</li>
+						<li>GUCCI</li>
+						<li>香奈儿</li>
+						<li>迪奥</li>
+					</ul>
+				</li>
+				<li>时尚用品
+					<ul>
+						<li>家具</li>
+						<li>厨卫用具</li>
+						<li>招财貔貅</li>
+					</ul>
+				</li>
+				<li>大家电
+					<ul>
+						<li>智能电视</li>
+						<li>空调</li>
+						<li>智能冰箱</li>
+						<li>大型洗衣机</li>
+						<li>DVD播放器</li>
+					</ul>
+				</li>
+			</ul>
+			<ul id="gdHot">
+				<h2>热卖商品</h2>
+				<li>
+					<img src="../images/ax_03.gif" alt="" />
+					<h2>三星手机GALAXY S5(G9006V)</h2>
+					<h2>商城价: ￥2299.00</h2>
+				</li>
+				<li>
+					<img src="../images/ax_06.gif" alt="" />
+					<h2>iPhone5S(4G开放版)16G金</h2>
+					<h2>商城价: ￥3499.00</h2>
+				</li>
+				<li>
+					<img src="../images/ax_08.jpg" alt="" />
+					<h2>iPhone4S(8G)白联通版</h2>
+					<h2>商城价: ￥1799.00</h2>
+				</li>
+			</ul>
+		</div>
+		<div id="gdRight">
+			<div id="filter">
+				<li>手机<span>商品筛选</span></li>
+				<li>品牌：
+					<a href="#">三星手机</a>
+					<a href="#">三星</a>
+					<a href="#">华为</a>
+					<a href="#">金立</a>
+					<a href="#">VIVO</a>
+					<a href="#">联想</a>
+					<a href="#">htc</a>
+					<a href="#">OPPO</a>
+					<a href="#">小米</a>
+					<a href="#">诺基亚</a>
+					<a href="#">魅族</a>
+					<a href="#">酷派</a>
+					<a href="#">中兴</a>
+					<a href="#">iPhone</a>
+					<span>更多<i>﹀</i></span>
+				</li>
+			</div>
+			<div id="sort">排列方式:
+				<span>销量↓</span>
+				<span>新品↓</span>
+				<span>价格↓</span>
+				<span><label><input type="checkbox" /> 利群自营</label></span>
+				<span><label><input type="checkbox"/> 平台商家</label></span>
+				<i>共 &nbsp; 386 个商品 &nbsp; 1/20 &nbsp;</i>
+				<span><i>◀</i> 上一页</span>
+				<span>下一页 <i>▶</i></span>
+			</div>
+			<ul id="gdList" class="clearfix"></ul>
+			<ul id="page2">
+				每页20条/共386条
+				<span>1</span>
+				<span>2</span>
+				<span>3</span>
+				<span>4</span>
+				<span>5</span>
+				<span>6</span>
+				<span>7</span>
+				<span>8</span>
+				<span>9</span>
+				<span>10</span>
+				<span>11</span>
+				<span>下一页</span>
+				<span>末页</span>
+				第1页/共20页
+			</ul>
+		</div>		
+	</div>	
+</div>
+<!--footer-->
+<div id="footer">
+	<!--top-->
+<div id="top">
+		<h1>
+			<img src="../images/a_02.png" alt="logo"/>
+		</h1>
+		<div id="login" class="clearfix">
+			<div id="message" class="clearfix">
+				<h2>Hi, <span id="insert"></span> 欢迎来到利群商城！</h2>
+				<h3>请登录</h3>
+				<h4>免费注册</h4>
+			</div>
+			<ul>
+				<li>我的订单</li>
+				<div></div>
+				<li><i class="iconfont icon-wo"></i>会员中心</li>
+				<div></div>
+				<li>客户服务<i class="iconfont icon-zelvxuanzefeiyongdaosanjiaoxingfandui"></i></li>
+				<div></div>
+				<li><i class="iconfont icon-shouji"></i>手机利群</li>
+				<div></div>
+				<li onclick="location.href='index.html';">利群官网</li>
+				<div></div>
+				<li>关注利群:</li>
+				<img src="../images/a_06.png" alt="" />
+				<img src="../images/a_08.png" alt="" />
+				<img src="../images/a_10.png" alt="" />
+			</ul>
+		</div>
+		<div id="search">
+			<h2>
+				<img src="../images/a_16.jpg" alt="" />
+			</h2>
+			<h3>
+				<img src="../images/b_03.jpg" alt="" />
+			</h3>
+			<div id="form">
+				<form onsubmit="return false;">
+					<i class="iconfont icon-fangdajing"></i>
+					<input type="text" placeholder="美赞臣"/>
+					<input type="button" value=" 搜  索"/>			
+				</form>
+				<ul>
+					<li>热门搜索:</li>
+					<li>丹姿大促</li>
+					<li>纸品联合</li>
+					<li>中秋月饼</li>
+					<li>亨氏专场</li>
+					<li>手机大促</li>
+					<li>家电阅兵</li>
+				</ul>
+			</div>
+			<div onclick="location.href='cart.html';" id="shopCart">
+				<div>0</div>
+				<i class="iconfont icon-gouwuche"></i> 去购物车结算
+			</div>
+			<div id="tel">
+				<h4>客服热线</h4>
+				<h5>4006-888-688</h5>
+			</div>
+		</div>
+	</div>
+	<!--nav-->
+	<div id="nav">
+		<ul>
+			<li id="kind">全部商品分类</li>
+			<li id="ind">首&nbsp;&nbsp;&nbsp;&nbsp;页</li>
+			<li>利群生鲜</li>
+			<li>利群超市</li>
+			<li>母婴馆</li>
+			<li>利群团</li>
+			<li>药品商城</li>
+			<li>积分商城</li>
+			<li>水电煤缴费</li>
+		</ul>
+	</div>
+</div>
+</body>
+</html>
+
